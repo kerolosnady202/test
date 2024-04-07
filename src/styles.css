@@ -1,0 +1,25 @@
+
+body{
+  background-color: #131722;
+  color: #fff;
+  font-family: 'segoe ui light';
+}
+.bglight{
+  background-color: #24baef;
+}
+.bord{
+  height: 4px;
+  /* margin: 22px 0; */
+  background-image: radial-gradient(circle at 0% -25%,#ff8947 0% ,#ff8354 0,#DA2c94 42%,#3E13A5 100%);
+}
+.vote{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

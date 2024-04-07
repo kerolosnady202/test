@@ -1,0 +1,25 @@
+<div class="container py-5">
+  <app-slider [topMovies]="trendingMovies" [posterPrefixinchild]="imgURL" (Trending)="datafromchild =$event"></app-slider>
+
+  <h3>{{datafromchild}}</h3>
+  <h3>Trending Movies</h3>
+  <div class="bord my-4"></div>
+  <div class="row">
+    <div *ngFor="let movie of trendingMovies" class="col-md-3  ">
+      <div class="movie position-relative">
+        <img class="w-100" [src]="imgURL+movie.poster_path" alt="">
+        <div class="vote" [class]="{'bg-danger':movie.vote_average >= 7 ,'bg-secondary':movie.vote_average < 7 }">{{movie.vote_average}}</div>
+        <div class="vote" [class]="movie.vote_average > 7?'bg-danger' : 'bg-primary'">{{movie.vote_average}}</div>
+        <h4>{{movie.title}}</h4>
+        <p [ngStyle]="{'color':movie.overview.length > 300 ?'white' :'blue'}">{{movie.overview}}</p>
+        <p>{{movie.overview}}</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
